@@ -1,3 +1,3 @@
-function write_url(value) { 
-    window.location = value;
+function write_url(value) {
+	window.location = value;
 }
