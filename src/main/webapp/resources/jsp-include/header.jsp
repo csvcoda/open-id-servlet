@@ -18,6 +18,7 @@
 		<c:if test='<%= session.getAttribute("authentication") == null %>'>
 			<a href="<c:url value='/login?providerId=google' />">Google Login</a> &nbsp;
 			<a href="<c:url value='/login?providerId=yahoo!' />">Yahoo! Login</a> &nbsp;
+			<a href="<c:url value='/login?providerId=veritas' />">Veritas Login</a> &nbsp;
 		</c:if>
 		
 		<c:if test='<%= session.getAttribute("authentication") != null %>'>

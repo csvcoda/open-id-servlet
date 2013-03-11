@@ -29,6 +29,8 @@ public class OpenIDChooserServlet extends HttpServlet {
 				endpoint = manager.lookupEndpoint("Google");
 			else if (provider.equals("yahoo!"))
 				endpoint = manager.lookupEndpoint("Yahoo");
+			else if (provider.equals("veritas"))
+				endpoint = manager.lookupEndpoint("Veritas");
 			else
 				throw new ServerException("Unknown provider: " + provider);
 			

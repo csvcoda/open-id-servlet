@@ -40,6 +40,9 @@ public class OpenIDService {
 			} else if (providerName.equals("yahoo!")) {
 				manager = new OpenIdManager();
 				endpoint = manager.lookupEndpoint("Yahoo");
+			} else if (providerName.equals("veritas")) {
+				manager = new OpenIdManager();
+				endpoint = manager.lookupEndpoint("Veritas");
 			} else {
 				RuntimeException re = new RuntimeException("Unsupported provider: " + providerName);
 				logger.error(re.toString());
@@ -83,6 +86,8 @@ public class OpenIDService {
 				return "https://www.google.com/accounts/Logout";
 			} else if (providerName.equals("yahoo!")) {
 				return "https://login.yahoo.com/config/login?logout=1";
+			} else if (providerName.equals("veritas")) {
+				return "http://test.veritas.nl/logout";
 			} else {
 				RuntimeException re = new RuntimeException("Undefined provider name: " + providerName);
 				logger.error(re.toString());
